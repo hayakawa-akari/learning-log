@@ -21,3 +21,12 @@ if command == "add":
 elif command == "list":
     for i, task in enumerate(todos, 1):
         print(i, task)
+elif command == "delete":
+    index = int(sys.argv[2]) - 1
+    if 0 <= index < len(todos):
+        removed_task = todos.pop(index)
+        print("削除しました:", removed_task)
+        with open(FILE, "w", encoding="utf-8") as f:
+            json.dump(todos, f, ensure_ascii=False)
+    else:
+        print("無効なインデックスです。")
