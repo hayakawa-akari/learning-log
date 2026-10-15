@@ -38,3 +38,9 @@
   - 原因：フォルダの場所が変わったため、`.venv`が古いパスを覚えたままだった
   - 対処：`.venv`を作り直し、`python -m pip install`で入れ直した
 - `pip`ではなく`python -m pip`と書くほうが、今のPythonに確実に入る
+
+### 2-3 Claudeを1回呼び出す
+- `python -m pip install anthropic`でSDKを入れ、`hello_claude.py`でClaudeに質問を送った
+- `load_dotenv()`で`.env`のキーを読み込む（コードにキーは書かない）
+- `response.content[0].text`で返事、`response.usage`でトークン数（`input_tokens`と`output_tokens`）を確認した
+
