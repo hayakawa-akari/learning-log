@@ -29,4 +29,6 @@ git add README.md
 git commit -m "記録を追加"
 git push
 
+2 ブランチの概念がいまだに理解できてない２－５って結局何してるのかなぁ？
+
 
