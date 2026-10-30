@@ -44,3 +44,12 @@
 - `load_dotenv()`で`.env`のキーを読み込む（コードにキーは書かない）
 - `response.content[0].text`で返事、`response.usage`でトークン数（`input_tokens`と`output_tokens`）を確認した
 
+
+### 2-6 Streamlit入門
+- `st.title`、`st.text_input`、`st.button`で練習アプリを作り、`streamlit run`でブラウザに表示した
+- 操作のたびにファイルが上から全部再実行される
+
+### 2-7 チャット画面
+- `chat_app.py`で、対話CLIをブラウザのチャット画面に移した
+- 再実行で消えないよう、会話履歴は`st.session_state`に保存する
+- つまずき：`response.content[0].text`で`ThinkingBlock`のエラーが出た。返事は複数の部品で返ることがあるので、種類が`text`のものだけをつなげる書き方に直した
